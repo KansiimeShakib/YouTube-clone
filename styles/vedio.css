@@ -1,0 +1,138 @@
+.thumbnail{
+  width: 100%; 
+}
+.vedio-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+/* this style below is how to make your webpage responsive */
+@media (max-width: 750px) {
+  .vedio-grid {
+   grid-template-columns: 1fr 1fr; 
+  }
+
+}
+
+ 
+@media (min-width: 751)  and (max-width: 999) {
+  .vedio-grid {
+    grid-template-columns: 1fr 1fr 1fr; 
+   } 
+}
+
+@media (min-width: 1000px) {
+  .vedio-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+}
+.vedio-title{
+  margin-top: 0;
+  margin-bottom:10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+} 
+.vedio-author, 
+.vedio-stats{ 
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+     /* in this style above, color is not affected by 
+   inheritance due to specificity property  */
+}
+.vedio-author{
+  margin-bottom: 4px;
+}
+
+
+.vedio-photo {
+  padding: 8px;
+  display: inline-block;
+
+}
+/* here i have used nested layout to style my webpage */
+.vedio-data {
+  padding: 8px;
+  height: 8px;
+  display: inline-block;
+}
+/* position absolute in position relative stylings
+ are used to creat tooltips in css */
+ .vedio-pic-container{
+  position: relative;
+
+}
+.vedio-pic-container .tooltip {
+ position: absolute;
+ background-color: white;
+ color: black;
+bottom: -50px;
+border-radius: 4px;
+padding: 5px;
+font-size: 12px;
+opacity: 1;
+transition: 0.15s;
+pointer-events: none;
+white-space: nowrap;
+opacity: 0;
+pointer-events: none;
+white-space: nowrap;
+
+
+}
+.vedio-pic-container:hover .tooltip{
+opacity: 1;
+}
+
+
+
+/* the styling below and above are used to
+ creat a nested layout "but when we display inline blockk,
+  then we are looking forward to a horizontal nested layout 
+  and viceversa " */
+.vedio-info-grid {
+  display: flex;
+}
+.vedio-pic{
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+}
+.vedio-info{
+  display: inline-block;
+  width: 245px;
+}
+
+.profile-pic{
+  width: 36px;
+  border-radius: 50px;
+}
+.thumbnail-row{
+  margin-bottom: 8px; 
+  position: relative;
+}
+
+/* time is by the styling of position absolute
+ in position relative  */
+.vedio-time{
+  font-size: 12px;
+  font-weight: 500;
+padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
+
+
+
+
+
+
+
+
+
